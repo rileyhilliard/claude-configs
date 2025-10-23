@@ -1,0 +1,11 @@
+# Ignore everything at the root
+/*
+
+# Except these directories
+!/agents/
+!/commands/
+
+# And these files
+!LICENSE.md
+!README.md
+!.gitignore
