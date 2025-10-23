@@ -40,6 +40,7 @@ If no clear pattern exists or the existing commits are poorly formatted, use **C
 ```
 
 **Common Types:**
+
 - `feat`: New feature for the user
 - `fix`: Bug fix
 - `docs`: Documentation only changes
@@ -53,13 +54,15 @@ If no clear pattern exists or the existing commits are poorly formatted, use **C
 - `revert`: Reverts a previous commit
 
 **Style Guidelines:**
+
 - **Imperative mood**: Write as commands (e.g., "Add feature" not "Added feature")
-- Think: "If applied, this commit will ___"
+- Think: "If applied, this commit will \_\_\_"
 - **Subject line**: 50 characters max, no period at end
 - **Body**: Wrap at 72 characters, explain WHAT and WHY (not HOW)
-- **Breaking changes**: Add `!` after type (e.g., `feat!: redesign API`)
+- **Breaking changes**: Add exclamation mark after type (e.g., "feat!: redesign API")
 
 **Examples:**
+
 ```
 feat(auth): add OAuth2 authentication support
 
