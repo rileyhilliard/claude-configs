@@ -18,4 +18,11 @@ Process:
 4. Show the proposed commit message to the user
 5. Create the commit with the message
 
+Do not add attribution footers to commit messages:
+
+```
+🤖 Generated with Claude Code
+Co-Authored-By: Claude
+```
+
 Follow conventional commit format: check recent commits with `git log -10 --oneline` to match the project's style.
