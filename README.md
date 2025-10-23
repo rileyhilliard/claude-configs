@@ -30,7 +30,7 @@ This repository contains a carefully crafted Claude Code configuration that tran
 
 ### 1-Line Install
 
-![Hacker Man](https://i.giphy.com/2vN0qPsqHOZISBxvEA.gif)
+![Hacker Man](assets/hackerman.gif)
 
 **Fresh install** (no existing config):
 

@@ -4,6 +4,7 @@
 # Except these directories
 !/agents/
 !/commands/
+!/assets/
 
 # And these files
 !LICENSE.md
