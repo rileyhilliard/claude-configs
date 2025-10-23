@@ -30,15 +30,11 @@ This repository contains a carefully crafted Claude Code configuration that tran
 
 ### 1-Line Install
 
-![Hacker Man](https://media.giphy.com/media/2vN0qPsqHOZISBxvEA/giphy.gif)
+![Hacker Man](https://i.giphy.com/2vN0qPsqHOZISBxvEA.gif)
 
 **Fresh install** (no existing config):
 
-```bash
-npm install -g @anthropic-ai/claude-code && git clone https://github.com/rileyhilliard/claude-configs.git ~/.claude
-```
-
-**Merge with existing config:**
+> This assumes you already have claude code setup. If not, head over to [Claude Code](https://www.claude.com/product/claude-code) and install it first.
 
 ```bash
 git clone https://github.com/rileyhilliard/claude-configs.git /tmp/claude-configs && mkdir -p ~/.claude && cp -r /tmp/claude-configs/{commands,agents} ~/.claude/ && rm -rf /tmp/claude-configs
