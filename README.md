@@ -99,6 +99,22 @@ Agents are expert AI personas with specialized knowledge, custom workflows, and 
 | `@technical-architect`   | 🔵 Blue   | System design and architectural planning with Mermaid diagrams       | Planning new features, evaluating technical approaches, writing ADRs         |
 | `@test-writer`           | 🟢 Green  | Behavior-driven testing focused on integration and E2E tests         | Adding test coverage, writing maintainable tests, testing user workflows     |
 
+### Human-in-the-Loop Agents 🤝
+
+5 specialized general-purpose agents with intelligent preflight wizards and selective decision tracking:
+
+| Agent | Color | Logs Decisions | Best For |
+| --- | --- | --- | --- |
+| `@codebase-explorer` | 🔵 Blue | No | Documenting architecture and data flows in any codebase |
+| `@session-discovery-logger` | 🟣 Purple | No | Capturing surprising findings and gotchas from work sessions |
+| `@work-session-summarizer` | 🟢 Green | **Yes** ✓ | Creating worklogs, commit messages, or session notes |
+| `@documentation-updater` | ⚫ Gray | No | Syncing documentation with current code implementation |
+| `@code-quality-reviewer` | 🔴 Red | **Yes** ✓ | Reviewing code for security, performance, and consistency |
+
+**What makes these special**: Work in ANY codebase without setup requirements, adapt to any repository structure, and selectively track significant decisions to `major_decisions.json`.
+
+[📖 Read full documentation →](agents/README-HUMAN-IN-LOOP.md)
+
 ## Usage Examples
 
 ### Real-World Scenarios
