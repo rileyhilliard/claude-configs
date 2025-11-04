@@ -5,6 +5,8 @@
 !/agents/
 !/commands/
 !/assets/
+!/resources/
+!/skills/
 
 # And these files
 !LICENSE.md
