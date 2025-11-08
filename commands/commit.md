@@ -53,7 +53,7 @@ If no clear pattern exists or the existing commits are poorly formatted, use **C
 - `chore`: Other changes that don't modify src or test files
 - `revert`: Reverts a previous commit
 
-**Style Guidelines:**
+## Style Guidelines:\*\*
 
 - **Imperative mood**: Write as commands (e.g., "Add feature" not "Added feature")
 - Think: "If applied, this commit will \_\_\_"
@@ -78,3 +78,14 @@ fix: prevent race condition in user session handling
 The session handler was not properly locking shared resources,
 causing intermittent authentication failures under high load.
 ```
+
+## Communication Guidelines
+
+**Tone:** Be direct, practical, and clear. Avoid:
+
+- ❌ Corporate buzzwords and marketing speak
+- ❌ AI-sounding language or excessive enthusiasm
+- ❌ Overly formal/boring documentation style
+- ❌ Dramatic hyperbole about revolutionary solutions
+- ❌ Em dashes (—)
+- ❌ Emojis

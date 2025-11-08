@@ -9,7 +9,8 @@ This repository contains a carefully crafted Claude Code configuration that tran
 **What you get:**
 
 - **8 Custom Commands** - Lightning-fast shortcuts for common dev tasks
-- **7 Specialized Agents** - Expert AI personas that excel at specific engineering challenges
+- **6 Specialized Agents** - Expert AI personas that excel at specific engineering challenges
+- **10+ Skills** - Reusable testing, debugging, and development patterns
 - **Battle-tested workflows** - Proven patterns for debugging, reviewing, optimizing, and more
 
 ---
@@ -37,7 +38,7 @@ This repository contains a carefully crafted Claude Code configuration that tran
 > This assumes you already have claude code setup. If not, head over to [Claude Code](https://www.claude.com/product/claude-code) and install it first.
 
 ```bash
-git clone https://github.com/rileyhilliard/claude-configs.git /tmp/claude-configs && mkdir -p ~/.claude && cp -r /tmp/claude-configs/{commands,agents} ~/.claude/ && rm -rf /tmp/claude-configs
+git clone https://github.com/rileyhilliard/claude-configs.git /tmp/claude-configs && mkdir -p ~/.claude && cp -r /tmp/claude-configs/{commands,agents,skills,CLAUDE.md} ~/.claude/ && rm -rf /tmp/claude-configs
 ```
 
 That's it! Start Claude Code with `claude` and your commands/agents are ready to use.
@@ -97,7 +98,8 @@ Agents are expert AI personas with specialized knowledge, custom workflows, and 
 | `@performance-optimizer` | 🟡 Yellow | Data-driven performance analysis and targeted optimization           | Slow renders, memory leaks, large bundle sizes, API latency                  |
 | `@refactor-specialist`   | 🔵 Blue   | Code restructuring that improves quality without changing behavior   | Reducing duplication, simplifying logic, improving maintainability           |
 | `@technical-architect`   | 🔵 Blue   | System design and architectural planning with Mermaid diagrams       | Planning new features, evaluating technical approaches, writing ADRs         |
-| `@test-writer`           | 🟢 Green  | Behavior-driven testing focused on integration and E2E tests         | Adding test coverage, writing maintainable tests, testing user workflows     |
+
+**Note:** `@test-writer` has been deprecated and migrated to skills. Use `@skills/writing-tests` for test creation guidance and `@skills/testing-anti-patterns` for prevention.
 
 ## Usage Examples
 
@@ -140,8 +142,8 @@ git add .
 # Get architectural guidance
 @technical-architect I need to add real-time notifications to the app. Users should see updates instantly when data changes, and we have 10k concurrent users.
 
-# Once planned, add comprehensive tests
-@test-writer Create integration tests for the notification system following our testing patterns
+# Once implemented, the writing-tests skill guides test creation
+# (Use @skills/writing-tests during implementation)
 ```
 
 **Scenario 5: Legacy code needs love**
@@ -271,10 +273,15 @@ Always explain the risk and impact of each vulnerability found.
 │   ├── explain.md
 │   ├── debug.md
 │   └── ...
-└── agents/           # Specialized AI personas
-    ├── bug-hunter.md
-    ├── code-reviewer.md
-    ├── test-writer.md
+├── agents/           # Specialized AI personas
+│   ├── bug-hunter.md
+│   ├── code-reviewer.md
+│   ├── archived/
+│   │   └── test-writer.md  # Deprecated, migrated to skills
+│   └── ...
+└── skills/           # Reusable testing and development skills
+    ├── writing-tests/
+    ├── testing-anti-patterns/
     └── ...
 ```
 
@@ -305,8 +312,7 @@ Commands and agents work great in sequence:
 
 # Investigation workflow
 /explain src/core/auth-middleware.ts
-@security-auditor Check this authentication middleware for vulnerabilities
-@test-writer Add comprehensive security tests for the auth middleware
+# Then write tests guided by @skills/writing-tests
 ```
 
 ### Pro Tips
@@ -405,13 +411,13 @@ Each agent has a distinct approach to their domain. Understanding their "persona
 - Writes like a human, not a bot
 - _Use when:_ Planning new systems or features
 
-**@test-writer** - The Behavior Believer
+**Testing Skills** - `@skills/writing-tests` & `@skills/testing-anti-patterns`
 
-- Integration tests over unit tests
-- Tests what users see, not implementation
-- Makes tests that survive refactoring
-- Imports constants instead of hard-coding strings
-- _Use when:_ You need tests that actually catch bugs
+- Integration tests over unit tests (Testing Trophy model)
+- Tests what users see, not implementation details
+- Tests survive refactoring when behavior unchanged
+- Real dependencies over mocks (minimal mocking)
+- _Use when:_ Writing tests or avoiding common testing mistakes
 
 ## FAQ
 

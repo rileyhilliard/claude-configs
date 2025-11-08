@@ -7,6 +7,9 @@
 !/assets/
 !/resources/
 !/skills/
+!/hooks/
+!/CLAUDE.md
+!/LICENSE.md
 
 # And these files
 !LICENSE.md

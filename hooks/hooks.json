@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh"
+          },
+          {
+            "type": "command",
+            "command": "echo '📦 Project: '$(basename \"$PWD\") '| 🌿 Branch: '$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo 'N/A') '| 📝 Latest: '$(git log -1 --pretty=format:'%s' 2>/dev/null | head -c 50 || echo 'No commits')"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if command -v osascript >/dev/null 2>&1; then osascript -e 'display notification \"Claude needs your input\" with title \"Claude Code\"'; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -8,11 +8,13 @@ allowed-tools: Bash, BashOutput, Read, Grep
 Run the project's test suite and analyze any failures.
 
 Arguments:
-- `$ARGUMENTS`: Optional custom test command (e.g., "npm test", "pytest", "cargo test")
+
+- `$ARGUMENTS`: Optional custom test command (e.g., "yarn test", "pytest", "cargo test")
 
 Process:
+
 1. Detect the test command automatically if not provided:
-   - Check for package.json (npm test)
+   - Check for package.json (yarn test)
    - Check for pytest.ini or setup.py (pytest)
    - Check for Cargo.toml (cargo test)
    - Check for Makefile with test target
