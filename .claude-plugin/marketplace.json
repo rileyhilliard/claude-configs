@@ -23,7 +23,7 @@
       "license": "MIT",
       "keywords": ["commands", "workflow", "automation", "hooks", "essential"],
       "category": "workflows",
-      "strict": false,
+      "strict": true,
       "commands": [
         "./commands/test.md",
         "./commands/explain.md",
@@ -58,7 +58,7 @@
         "essential"
       ],
       "category": "development",
-      "strict": false,
+      "strict": true,
       "skills": [
         "./skills/writing-tests",
         "./skills/testing-anti-patterns",
@@ -94,7 +94,7 @@
         "mermaid"
       ],
       "category": "ai-ml",
-      "strict": false,
+      "strict": true,
       "skills": [
         "./skills/creating-claude-skills",
         "./skills/dispatching-parallel-agents",
@@ -123,7 +123,7 @@
         "essential"
       ],
       "category": "development",
-      "strict": false,
+      "strict": true,
       "agents": [
         "./agents/architect.md",
         "./agents/code-reviewer.md",

@@ -5,18 +5,5 @@
   "author": {
     "name": "Riley Hilliard"
   },
-  "license": "MIT",
-  "skills": [
-    "writing-tests",
-    "testing-anti-patterns",
-    "systematic-debugging",
-    "refactoring-code",
-    "optimizing-performance",
-    "handling-errors",
-    "root-cause-tracing",
-    "verification-before-completion",
-    "writing-plans",
-    "executing-plans",
-    "condition-based-waiting"
-  ]
+  "license": "MIT"
 }
