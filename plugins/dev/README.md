@@ -1,4 +1,4 @@
-# Development Skills
+# Dev
 
 Core development skills covering testing, debugging, refactoring, performance optimization, error handling, and planning workflows.
 
@@ -34,7 +34,7 @@ None. This plugin is standalone.
 ## Installation
 
 ```bash
-claude plugins install development-skills
+claude plugins install dev
 ```
 
 ## Usage Examples

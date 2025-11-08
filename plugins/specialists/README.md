@@ -1,4 +1,4 @@
-# Specialized Agents
+# Specialists
 
 Specialized agents for technical architecture, code review, and documentation writing, plus reference templates for ADRs, PRDs, and technical designs.
 
@@ -33,7 +33,7 @@ The reference templates can be used independently or in conjunction with the age
 ## Installation
 
 ```bash
-claude plugins install specialized-agents
+claude plugins install specialists
 ```
 
 ## Usage Examples
@@ -48,7 +48,7 @@ Request a code review:
 ```
 /review
 ```
-(If you have core-workflow installed, or invoke the code-reviewer agent directly)
+(If you have workflow installed, or invoke the code-reviewer agent directly)
 
 Write documentation:
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "agent-skills",
+  "name": "meta",
   "description": "Meta skills for working with Claude agents, creating custom skills, dispatching parallel agents, and creating professional diagrams",
   "version": "1.0.0",
   "author": {

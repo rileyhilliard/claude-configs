@@ -1,4 +1,4 @@
-# Core Workflow
+# Workflow
 
 Essential development workflow commands and session automation.
 
@@ -17,7 +17,7 @@ Essential development workflow commands and session automation.
 
 ### Hooks
 
-- `session-start.sh` - Automatically loads user instructions and the using-abilities skill at the start of each session
+- `session-start.sh` - Automatically loads user instructions from ~/.claude/CLAUDE.md
 
 ## When to Use This Plugin
 
@@ -31,14 +31,12 @@ This is the foundation plugin that most developers will want installed.
 
 ## Dependencies
 
-**Requires:** `agent-skills` plugin
-
-The session-start hook depends on the `using-abilities` skill from the agent-skills plugin. The hook will work without it, but you'll miss the automatic skill loading functionality.
+**Requires:** `meta` plugin
 
 ## Installation
 
 ```bash
-claude plugins install core-workflow
+claude plugins install workflow
 ```
 
 ## Usage Examples

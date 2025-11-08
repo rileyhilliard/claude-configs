@@ -6,10 +6,10 @@ A curated collection of development workflows, skills, and specialized agents fo
 
 This is a plugin marketplace that provides four focused plugins for Claude Code:
 
-- **core-workflow** - Essential development commands and session automation
-- **development-skills** - Reusable patterns for testing, debugging, and refactoring
-- **agent-skills** - Meta skills for working with agents and creating custom skills
-- **specialized-agents** - Expert AI personas for architecture, code review, and documentation
+- **workflow** - Essential development commands and session automation
+- **dev** - Reusable patterns for testing, debugging, and refactoring
+- **meta** - Meta skills for working with agents and creating custom skills
+- **specialists** - Expert AI personas for architecture, code review, and documentation
 
 These plugins work together to provide a comprehensive development environment, but you can install just the ones you need.
 
@@ -30,17 +30,17 @@ You need Claude Code installed. If you don't have it yet, head to [claude.com/pr
 2. Install the plugins you want (recommended order):
 
 ```bash
-# Start with agent-skills for foundational capabilities
-/plugin install agent-skills
+# Start with meta for foundational capabilities
+/plugin install meta
 
 # Add development workflows
-/plugin install development-skills
+/plugin install dev
 
 # Get the command shortcuts
-/plugin install core-workflow
+/plugin install workflow
 
 # Optional: specialized agents for architecture and reviews
-/plugin install specialized-agents
+/plugin install specialists
 ```
 
 ### Verify Installation
@@ -61,7 +61,7 @@ claude
 
 ## The Plugins
 
-### core-workflow
+### workflow
 
 Essential commands for everyday development work. These are your quick shortcuts.
 
@@ -81,7 +81,7 @@ Essential commands for everyday development work. These are your quick shortcuts
 - Session startup automation
 - Project-specific configurations
 
-### development-skills
+### dev
 
 Core development patterns you can invoke as needed. These are reusable workflows that guide specific tasks.
 
@@ -99,7 +99,7 @@ Core development patterns you can invoke as needed. These are reusable workflows
 - `executing-plans` - Execute plans in controlled batches
 - `condition-based-waiting` - Replace race conditions with polling
 
-### agent-skills
+### meta
 
 Meta skills for working with Claude Code itself. Create custom skills, dispatch parallel agents, and visualize systems.
 
@@ -111,7 +111,7 @@ Meta skills for working with Claude Code itself. Create custom skills, dispatch 
 - `subagent-driven-development` - Execute plans with fresh subagents per task
 - `visualizing-with-mermaid` - Create professional technical diagrams
 
-### specialized-agents
+### specialists
 
 Expert AI personas for complex work requiring deep expertise.
 
@@ -186,7 +186,7 @@ All plugins are just markdown files organized in directories. Want to customize?
 
 ### Creating Your Own Command
 
-Add a markdown file to `~/.claude/plugins/core-workflow/commands/`:
+Add a markdown file to `~/.claude/plugins/workflow/commands/`:
 
 ```markdown
 ---
@@ -216,7 +216,7 @@ Your skill workflow here.
 
 ### Creating Your Own Agent
 
-Add a markdown file to `~/.claude/plugins/specialized-agents/agents/`:
+Add a markdown file to `~/.claude/plugins/specialists/agents/`:
 
 ```markdown
 ---
@@ -236,14 +236,14 @@ Your agent personality and workflow here.
 ~/.claude/
 ├── CLAUDE.md              # Communication guidelines (copy here manually)
 └── plugins/
-    ├── core-workflow/
+    ├── workflow/
     │   ├── commands/      # 8 development commands
     │   └── hooks/         # Session automation
-    ├── development-skills/
+    ├── dev/
     │   └── skills/        # 11 development patterns
-    ├── agent-skills/
-    │   └── skills/        # 5 meta skills
-    └── specialized-agents/
+    ├── meta/
+    │   └── skills/        # 4 meta skills
+    └── specialists/
         ├── agents/        # 3 expert agents
         └── references/    # Document templates
 ```
@@ -252,14 +252,14 @@ Your agent personality and workflow here.
 
 Install in this order for best results:
 
-1. **agent-skills** - Provides foundational meta capabilities
-2. **development-skills** - Adds core development patterns
-3. **core-workflow** - Enables command shortcuts (depends on skills)
-4. **specialized-agents** - Optional, for architecture and reviews
+1. **meta** - Provides foundational meta capabilities
+2. **dev** - Adds core development patterns
+3. **workflow** - Enables command shortcuts (depends on skills)
+4. **specialists** - Optional, for architecture and reviews
 
 ## Tips
 
-**Start simple:** Install core-workflow first if you just want commands. Add other plugins as needed.
+**Start simple:** Install workflow first if you just want commands. Add other plugins as needed.
 
 **Commands accept arguments:** Most commands work with optional parameters.
 
