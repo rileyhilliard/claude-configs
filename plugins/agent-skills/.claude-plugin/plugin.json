@@ -1,0 +1,9 @@
+{
+  "name": "agent-skills",
+  "description": "Meta skills for working with Claude agents, creating custom skills, dispatching parallel agents, and creating professional diagrams",
+  "version": "1.0.0",
+  "author": {
+    "name": "Riley Hilliard"
+  },
+  "license": "MIT"
+}

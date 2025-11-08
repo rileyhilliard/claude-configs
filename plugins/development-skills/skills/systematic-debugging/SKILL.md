@@ -119,7 +119,7 @@ You MUST complete each phase before proceeding to the next.
 
    **WHEN error is deep in call stack:**
 
-   **REQUIRED SUB-SKILL:** Use superpowers:root-cause-tracing for backward tracing technique
+   **REQUIRED SUB-SKILL:** Use abilities:root-cause-tracing for backward tracing technique
 
    **Quick version:**
 
@@ -333,6 +333,7 @@ incorrect assumption, etc. Be technical and specific.]
 [Describe the changes made and why they address the root cause]
 
 Changes in:
+
 - `file.ts:123-125` - [what changed and why]
 - `test.ts:45` - [added regression test]
 
@@ -366,6 +367,7 @@ Changed middleware to create a new user context object for each request
 instead of mutating the shared object.
 
 Changes in:
+
 - `src/auth/middleware.ts:87-92` - Create shallow copy of user object before modification
 - `src/auth/middleware.test.ts:156-178` - Added concurrent request test
 

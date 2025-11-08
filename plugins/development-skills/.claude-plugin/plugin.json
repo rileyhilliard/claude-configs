@@ -1,0 +1,22 @@
+{
+  "name": "development-skills",
+  "version": "1.0.0",
+  "description": "Core development skills covering testing, debugging, refactoring, performance optimization, error handling, and planning workflows",
+  "author": {
+    "name": "Riley Hilliard"
+  },
+  "license": "MIT",
+  "skills": [
+    "writing-tests",
+    "testing-anti-patterns",
+    "systematic-debugging",
+    "refactoring-code",
+    "optimizing-performance",
+    "handling-errors",
+    "root-cause-tracing",
+    "verification-before-completion",
+    "writing-plans",
+    "executing-plans",
+    "condition-based-waiting"
+  ]
+}

@@ -2,14 +2,10 @@
 /*
 
 # Except these directories
-!/agents/
-!/commands/
 !/assets/
-!/resources/
-!/skills/
-!/hooks/
-!/CLAUDE.md
-!/LICENSE.md
+!/plugins/
+!/.claude-plugin/
+
 
 # And these files
 !LICENSE.md

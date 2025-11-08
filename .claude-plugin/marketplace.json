@@ -1,0 +1,140 @@
+{
+  "name": "claude-essentials",
+  "owner": {
+    "name": "Riley Hilliard",
+    "url": "https://github.com/rileyhilliard"
+  },
+  "metadata": {
+    "description": "Essential Claude Code configuration with practical commands, specialized agents, and battle-tested development skills for daily workflows",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "core-workflow",
+      "source": "./",
+      "description": "8 essential commands for daily development workflows plus session startup automation hook",
+      "version": "1.0.0",
+      "author": {
+        "name": "Riley Hilliard",
+        "url": "https://github.com/rileyhilliard"
+      },
+      "homepage": "https://github.com/rileyhilliard/claude-configs",
+      "repository": "https://github.com/rileyhilliard/claude-configs",
+      "license": "MIT",
+      "keywords": ["commands", "workflow", "automation", "hooks", "essential"],
+      "category": "workflows",
+      "strict": false,
+      "commands": [
+        "./commands/test.md",
+        "./commands/explain.md",
+        "./commands/quick-fix.md",
+        "./commands/debug.md",
+        "./commands/optimize.md",
+        "./commands/refactor.md",
+        "./commands/review.md",
+        "./commands/commit.md"
+      ],
+      "hooks": ["./hooks/hooks.json", "./hooks/session-start.sh"]
+    },
+    {
+      "name": "development-skills",
+      "source": "./",
+      "description": "11 core development skills covering testing, debugging, refactoring, performance optimization, error handling, and planning workflows",
+      "version": "1.0.0",
+      "author": {
+        "name": "Riley Hilliard",
+        "url": "https://github.com/rileyhilliard"
+      },
+      "homepage": "https://github.com/rileyhilliard/claude-configs",
+      "repository": "https://github.com/rileyhilliard/claude-configs",
+      "license": "MIT",
+      "keywords": [
+        "skills",
+        "testing",
+        "debugging",
+        "refactoring",
+        "performance",
+        "quality",
+        "essential"
+      ],
+      "category": "development",
+      "strict": false,
+      "skills": [
+        "./skills/writing-tests",
+        "./skills/testing-anti-patterns",
+        "./skills/systematic-debugging",
+        "./skills/refactoring-code",
+        "./skills/optimizing-performance",
+        "./skills/handling-errors",
+        "./skills/root-cause-tracing",
+        "./skills/verification-before-completion",
+        "./skills/writing-plans",
+        "./skills/executing-plans",
+        "./skills/condition-based-waiting"
+      ]
+    },
+    {
+      "name": "agent-skills",
+      "source": "./",
+      "description": "5 meta skills for working with Claude agents, creating custom skills, dispatching parallel agents, and creating professional diagrams",
+      "version": "1.0.0",
+      "author": {
+        "name": "Riley Hilliard",
+        "url": "https://github.com/rileyhilliard"
+      },
+      "homepage": "https://github.com/rileyhilliard/claude-configs",
+      "repository": "https://github.com/rileyhilliard/claude-configs",
+      "license": "MIT",
+      "keywords": [
+        "skills",
+        "agents",
+        "meta",
+        "parallel",
+        "diagrams",
+        "mermaid"
+      ],
+      "category": "ai-ml",
+      "strict": false,
+      "skills": [
+        "./skills/using-abilities",
+        "./skills/creating-claude-skills",
+        "./skills/dispatching-parallel-agents",
+        "./skills/subagent-driven-development",
+        "./skills/visualizing-with-mermaid"
+      ]
+    },
+    {
+      "name": "specialized-agents",
+      "source": "./",
+      "description": "3 specialized agents (technical architect, code reviewer, documentation writer) plus reference templates for ADRs, PRDs, and technical designs",
+      "version": "1.0.0",
+      "author": {
+        "name": "Riley Hilliard",
+        "url": "https://github.com/rileyhilliard"
+      },
+      "homepage": "https://github.com/rileyhilliard/claude-configs",
+      "repository": "https://github.com/rileyhilliard/claude-configs",
+      "license": "MIT",
+      "keywords": [
+        "agents",
+        "architecture",
+        "code-review",
+        "documentation",
+        "templates",
+        "essential"
+      ],
+      "category": "development",
+      "strict": false,
+      "agents": [
+        "./agents/architect.md",
+        "./agents/code-reviewer.md",
+        "./agents/documentation-writer.md"
+      ],
+      "references": [
+        "./references/adr.md",
+        "./references/prd.md",
+        "./references/technical-design.md"
+      ]
+    }
+  ]
+}
