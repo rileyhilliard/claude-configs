@@ -24,23 +24,23 @@ You need Claude Code installed. If you don't have it yet, head to [claude.com/pr
 1. Add this marketplace to Claude Code:
 
 ```bash
-claude /plugin marketplace add https://github.com/rileyhilliard/claude-configs
+/plugin marketplace add https://github.com/rileyhilliard/claude-configs
 ```
 
 2. Install the plugins you want (recommended order):
 
 ```bash
 # Start with agent-skills for foundational capabilities
-claude /plugin install agent-skills
+/plugin install agent-skills
 
 # Add development workflows
-claude /plugin install development-skills
+/plugin install development-skills
 
 # Get the command shortcuts
-claude /plugin install core-workflow
+/plugin install core-workflow
 
 # Optional: specialized agents for architecture and reviews
-claude /plugin install specialized-agents
+/plugin install specialized-agents
 ```
 
 ### Verify Installation

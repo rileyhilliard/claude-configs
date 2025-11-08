@@ -2,22 +2,22 @@
 description: Find and fix performance issues in code
 argument-hint: "[file-path-or-area]"
 model: sonnet
-allowed-tools: Task, Bash
+allowed-tools: Skill, Bash
 ---
 
-Use the Task tool to invoke the performance-optimizer agent to analyze code for performance issues and suggest optimizations.
+Use the Skill tool to invoke the optimizing-performance skill to analyze code for performance issues and suggest optimizations.
 
 Arguments:
 - `$ARGUMENTS`: Optional file path or area to focus on (defaults to unstaged changes)
 
 If `$ARGUMENTS` is empty:
 1. Run `git diff` to get unstaged changes
-2. Pass the unstaged changes as the focus area to the agent
+2. Focus on optimizing the unstaged changes
 
 If `$ARGUMENTS` is provided:
-- Pass it directly as the focus area
+- Use it as the focus area for optimization
 
-Pass the following prompt to the performance-optimizer agent:
+When invoking the optimizing-performance skill:
 
 "Analyze code for performance issues and suggest optimizations.
 

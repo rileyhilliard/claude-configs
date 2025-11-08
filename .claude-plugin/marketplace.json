@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "core-workflow",
-      "source": "./",
+      "source": "./plugins/core-workflow/",
       "description": "8 essential commands for daily development workflows plus session startup automation hook",
       "version": "1.0.0",
       "author": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "development-skills",
-      "source": "./",
+      "source": "./plugins/development-skills/",
       "description": "11 core development skills covering testing, debugging, refactoring, performance optimization, error handling, and planning workflows",
       "version": "1.0.0",
       "author": {
@@ -75,8 +75,8 @@
     },
     {
       "name": "agent-skills",
-      "source": "./",
-      "description": "5 meta skills for working with Claude agents, creating custom skills, dispatching parallel agents, and creating professional diagrams",
+      "source": "./plugins/agent-skills/",
+      "description": "4 meta skills for working with Claude agents, creating custom skills, dispatching parallel agents, and creating professional diagrams",
       "version": "1.0.0",
       "author": {
         "name": "Riley Hilliard",
@@ -96,7 +96,6 @@
       "category": "ai-ml",
       "strict": false,
       "skills": [
-        "./skills/using-abilities",
         "./skills/creating-claude-skills",
         "./skills/dispatching-parallel-agents",
         "./skills/subagent-driven-development",
@@ -105,7 +104,7 @@
     },
     {
       "name": "specialized-agents",
-      "source": "./",
+      "source": "./plugins/specialized-agents/",
       "description": "3 specialized agents (technical architect, code reviewer, documentation writer) plus reference templates for ADRs, PRDs, and technical designs",
       "version": "1.0.0",
       "author": {
