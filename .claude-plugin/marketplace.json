@@ -34,7 +34,7 @@
         "./commands/review.md",
         "./commands/commit.md"
       ],
-      "hooks": ["./hooks/hooks.json", "./hooks/session-start.sh"]
+      "hooks": "./hooks/hooks.json"
     },
     {
       "name": "development-skills",
@@ -129,11 +129,6 @@
         "./agents/architect.md",
         "./agents/code-reviewer.md",
         "./agents/documentation-writer.md"
-      ],
-      "references": [
-        "./references/adr.md",
-        "./references/prd.md",
-        "./references/technical-design.md"
       ]
     }
   ]
