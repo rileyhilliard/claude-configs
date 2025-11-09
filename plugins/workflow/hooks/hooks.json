@@ -21,7 +21,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if command -v osascript >/dev/null 2>&1; then osascript -e 'display notification \"👋🤖 Claude needs your input\" with title \"Claude Code\"'; fi"
+            "command": "if command -v osascript >/dev/null 2>&1; then osascript -e 'display notification \"Claude needs your input\" with title \"Claude Code\"'; fi"
           }
         ]
       }

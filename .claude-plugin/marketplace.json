@@ -10,9 +10,9 @@
   },
   "plugins": [
     {
-      "name": "🚀",
-      "source": "./plugins/🚀/",
-      "description": "Essential development workflows, commands, skills, and specialized agents for building software with Claude Code",
+      "name": "workflow",
+      "source": "./plugins/workflow/",
+      "description": "8 essential commands for daily development workflows plus session startup automation hook",
       "version": "1.0.0",
       "author": {
         "name": "Riley Hilliard",
@@ -21,17 +21,7 @@
       "homepage": "https://github.com/rileyhilliard/claude-essentials",
       "repository": "https://github.com/rileyhilliard/claude-essentials",
       "license": "MIT",
-      "keywords": [
-        "commands",
-        "workflow",
-        "skills",
-        "agents",
-        "testing",
-        "debugging",
-        "refactoring",
-        "architecture",
-        "essential"
-      ],
+      "keywords": ["commands", "workflow", "automation", "hooks", "essential"],
       "category": "workflows",
       "strict": true,
       "commands": [
@@ -44,6 +34,31 @@
         "./commands/review.md",
         "./commands/commit.md"
       ],
+      "hooks": "./hooks/hooks.json"
+    },
+    {
+      "name": "dev",
+      "source": "./plugins/dev/",
+      "description": "11 core development skills covering testing, debugging, refactoring, performance optimization, error handling, and planning workflows",
+      "version": "1.0.0",
+      "author": {
+        "name": "Riley Hilliard",
+        "url": "https://github.com/rileyhilliard"
+      },
+      "homepage": "https://github.com/rileyhilliard/claude-essentials",
+      "repository": "https://github.com/rileyhilliard/claude-essentials",
+      "license": "MIT",
+      "keywords": [
+        "skills",
+        "testing",
+        "debugging",
+        "refactoring",
+        "performance",
+        "quality",
+        "essential"
+      ],
+      "category": "development",
+      "strict": true,
       "skills": [
         "./skills/writing-tests",
         "./skills/testing-anti-patterns",
@@ -55,18 +70,65 @@
         "./skills/verification-before-completion",
         "./skills/writing-plans",
         "./skills/executing-plans",
-        "./skills/condition-based-waiting",
+        "./skills/condition-based-waiting"
+      ]
+    },
+    {
+      "name": "meta",
+      "source": "./plugins/meta/",
+      "description": "4 meta skills for working with Claude agents, creating custom skills, dispatching parallel agents, and creating professional diagrams",
+      "version": "1.0.0",
+      "author": {
+        "name": "Riley Hilliard",
+        "url": "https://github.com/rileyhilliard"
+      },
+      "homepage": "https://github.com/rileyhilliard/claude-essentials",
+      "repository": "https://github.com/rileyhilliard/claude-essentials",
+      "license": "MIT",
+      "keywords": [
+        "skills",
+        "agents",
+        "meta",
+        "parallel",
+        "diagrams",
+        "mermaid"
+      ],
+      "category": "ai-ml",
+      "strict": true,
+      "skills": [
         "./skills/creating-claude-skills",
         "./skills/dispatching-parallel-agents",
         "./skills/subagent-driven-development",
         "./skills/visualizing-with-mermaid"
+      ]
+    },
+    {
+      "name": "specialists",
+      "source": "./plugins/specialists/",
+      "description": "3 specialized agents (technical architect, code reviewer, documentation writer) plus reference templates for ADRs, PRDs, and technical designs",
+      "version": "1.0.0",
+      "author": {
+        "name": "Riley Hilliard",
+        "url": "https://github.com/rileyhilliard"
+      },
+      "homepage": "https://github.com/rileyhilliard/claude-essentials",
+      "repository": "https://github.com/rileyhilliard/claude-essentials",
+      "license": "MIT",
+      "keywords": [
+        "agents",
+        "architecture",
+        "code-review",
+        "documentation",
+        "templates",
+        "essential"
       ],
+      "category": "development",
+      "strict": true,
       "agents": [
         "./agents/architect.md",
         "./agents/code-reviewer.md",
         "./agents/documentation-writer.md"
-      ],
-      "hooks": "./hooks/hooks.json"
+      ]
     }
   ]
 }

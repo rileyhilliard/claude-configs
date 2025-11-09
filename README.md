@@ -1,17 +1,17 @@
 # Claude Essentials
 
-A comprehensive development plugin for Claude Code with essential commands, skills, and specialized agents.
+A curated collection of development workflows, skills, and specialized agents for Claude Code, distributed as marketplace plugins.
 
 ## What This Is
 
-This is a single plugin (🚀) that provides everything you need for daily development work:
+This is a plugin marketplace that provides four focused plugins for Claude Code:
 
-- **8 commands** - Quick shortcuts for testing, debugging, reviewing, and committing
-- **15 skills** - Reusable patterns for testing, debugging, refactoring, and optimization
-- **3 agents** - Expert personas for architecture, code review, and documentation
-- **Session hooks** - Automatic project configuration on startup
+- **workflow** - Essential development commands and session automation
+- **dev** - Reusable patterns for testing, debugging, and refactoring
+- **meta** - Meta skills for working with agents and creating custom skills
+- **specialists** - Expert AI personas for architecture, code review, and documentation
 
-Everything in one place, with minimal namespace pollution.
+These plugins work together to provide a comprehensive development environment, but you can install just the ones you need.
 
 ## Quick Start
 
@@ -27,13 +27,21 @@ You need Claude Code installed. If you don't have it yet, head to [claude.com/pr
 /plugin marketplace add https://github.com/rileyhilliard/claude-essentials
 ```
 
-2. Install the plugin:
+2. Install the plugins you want (recommended order):
 
 ```bash
-/plugin install 🚀
-```
+# Start with meta for foundational capabilities
+/plugin install meta
 
-That's it. You now have access to all commands, skills, and agents.
+# Add development workflows
+/plugin install dev
+
+# Get the command shortcuts
+/plugin install workflow
+
+# Optional: specialized agents for architecture and reviews
+/plugin install specialists
+```
 
 ### Verify Installation
 
@@ -47,70 +55,77 @@ claude
 # Type "/" to see all commands
 
 # Try a quick command
-/🚀:explain README.md
+/explain README.md
+
 ```
 
-## What's Included
+## The Plugins
 
-### Commands
+### workflow
 
-Quick shortcuts for everyday development work:
+Essential commands for everyday development work. These are your quick shortcuts.
 
-- `/🚀:test` - Run tests and analyze failures
-- `/🚀:explain` - Break down code or concepts
-- `/🚀:quick-fix` - Fix IDE diagnostics and linting errors
-- `/🚀:debug` - Launch systematic debugging
-- `/🚀:optimize` - Find performance bottlenecks
-- `/🚀:refactor` - Improve code quality
-- `/🚀:review` - Get comprehensive code review
-- `/🚀:commit` - Generate semantic commit messages
+**Commands:**
 
-### Skills
+- `/test` - Run tests and analyze failures
+- `/explain` - Break down code or concepts
+- `/quick-fix` - Fix IDE diagnostics and linting errors
+- `/debug` - Launch systematic debugging
+- `/optimize` - Find performance bottlenecks
+- `/refactor` - Improve code quality
+- `/review` - Get comprehensive code review
+- `/commit` - Generate semantic commit messages
 
-Reusable workflows for specific development patterns. Invoke with `@skills/🚀:skill-name`:
+**Hooks:**
 
-**Testing & Quality:**
+- Session startup automation
+- Project-specific configurations
+
+### dev
+
+Core development patterns you can invoke as needed. These are reusable workflows that guide specific tasks.
+
+**Skills:**
+
 - `writing-tests` - Testing Trophy methodology, behavior-focused tests
 - `testing-anti-patterns` - Prevent common testing mistakes
-- `verification-before-completion` - Verify before claiming success
-
-**Debugging & Problem Solving:**
 - `systematic-debugging` - Four-phase debugging framework
-- `root-cause-tracing` - Trace bugs to their source
-- `condition-based-waiting` - Replace race conditions with polling
-
-**Code Quality:**
 - `refactoring-code` - Behavior-preserving code improvements
 - `optimizing-performance` - Measurement-driven optimization
 - `handling-errors` - Error handling best practices
-
-**Planning & Execution:**
+- `root-cause-tracing` - Trace bugs to their source
+- `verification-before-completion` - Verify before claiming success
 - `writing-plans` - Create detailed implementation plans
 - `executing-plans` - Execute plans in controlled batches
+- `condition-based-waiting` - Replace race conditions with polling
 
-**Meta Skills:**
+### meta
+
+Meta skills for working with Claude Code itself. Create custom skills, dispatch parallel agents, and visualize systems.
+
+**Skills:**
+
 - `creating-claude-skills` - Best practices for authoring skills
+- `using-superpowers` - Mandatory workflows for finding and using skills
 - `dispatching-parallel-agents` - Investigate independent problems concurrently
 - `subagent-driven-development` - Execute plans with fresh subagents per task
 - `visualizing-with-mermaid` - Create professional technical diagrams
 
-### Agents
+### specialists
 
-Expert personas for complex, multi-step work. Invoke with `@agent-🚀:agent-name`:
+Expert AI personas for complex work requiring deep expertise.
+
+**Agents:**
 
 - `@architect` - System design and architectural planning with diagrams
 - `@code-reviewer` - Comprehensive PR/MR reviews enforcing standards
 - `@documentation-writer` - Clear, practical documentation
 
-### Reference Templates
+**Reference Templates:**
 
 - ADR (Architecture Decision Record)
 - PRD (Product Requirements Document)
 - Technical Design Document
-
-### Hooks
-
-- Session startup automation that loads project-specific configurations
 
 ## Usage Examples
 
@@ -119,40 +134,40 @@ Expert personas for complex, multi-step work. Invoke with `@agent-🚀:agent-nam
 **Fix failing tests:**
 
 ```bash
-/🚀:test
+/test
 # If complex, escalate:
-@skills/🚀:systematic-debugging
+@skills/systematic-debugging
 ```
 
 **Review before merge:**
 
 ```bash
-/🚀:review
+/review
 git add .
-/🚀:commit
+/commit
 ```
 
 **Optimize performance:**
 
 ```bash
-/🚀:optimize src/components/DataTable.tsx
+/optimize src/components/DataTable.tsx
 # For deep analysis:
-@skills/🚀:optimizing-performance
+@skills/optimizing-performance
 ```
 
 **Plan a feature:**
 
 ```bash
-@agent-🚀:architect I need to add real-time notifications. We have 10k concurrent users.
+@architect I need to add real-time notifications. We have 10k concurrent users.
 # Then create a plan:
-@skills/🚀:writing-plans
+@skills/writing-plans
 ```
 
 **Clean up legacy code:**
 
 ```bash
-/🚀:explain src/legacy/payment-processor.js
-@skills/🚀:refactoring-code
+/explain src/legacy/payment-processor.js
+@skills/refactoring-code
 ```
 
 ### Understanding the System
@@ -167,11 +182,11 @@ Use commands for quick actions, skills for following proven patterns, and agents
 
 ## Customization
 
-All components are just markdown files organized in directories. Want to customize? Edit them directly in `~/.claude/plugins/🚀/`.
+All plugins are just markdown files organized in directories. Want to customize? Edit them directly in `~/.claude/plugins/`.
 
 ### Creating Your Own Command
 
-Add a markdown file to `~/.claude/plugins/🚀/commands/`:
+Add a markdown file to `~/.claude/plugins/workflow/commands/`:
 
 ```markdown
 ---
@@ -185,7 +200,7 @@ Your command instructions here.
 
 ### Creating Your Own Skill
 
-Add a directory and SKILL.md file to `~/.claude/plugins/🚀/skills/`:
+Add a markdown file to a skills directory in any plugin:
 
 ```markdown
 ---
@@ -200,7 +215,7 @@ Your skill workflow here.
 
 ### Creating Your Own Agent
 
-Add a markdown file to `~/.claude/plugins/🚀/agents/`:
+Add a markdown file to `~/.claude/plugins/specialists/agents/`:
 
 ```markdown
 ---
@@ -219,30 +234,43 @@ Your agent personality and workflow here.
 ~/.claude/
 ├── CLAUDE.md              # Communication guidelines (copy here manually)
 └── plugins/
-    └── 🚀/
-        ├── .claude-plugin/
-        │   └── plugin.json     # Plugin metadata
-        ├── commands/           # 8 development commands
-        ├── skills/             # 15 development skills
-        ├── agents/             # 3 expert agents
-        ├── hooks/              # Session automation
-        └── references/         # Document templates
+    ├── workflow/
+    │   ├── commands/      # 8 development commands
+    │   └── hooks/         # Session automation
+    ├── dev/
+    │   └── skills/        # 11 development patterns
+    ├── meta/
+    │   └── skills/        # 4 meta skills
+    └── specialists/
+        ├── agents/        # 3 expert agents
+        └── references/    # Document templates
 ```
 
+## Installation Order Matters
+
+Install in this order for best results:
+
+1. **meta** - Provides foundational meta capabilities
+2. **dev** - Adds core development patterns
+3. **workflow** - Enables command shortcuts (depends on skills)
+4. **specialists** - Optional, for architecture and reviews
+
 ## Tips
+
+**Start simple:** Install workflow first if you just want commands. Add other plugins as needed.
 
 **Commands accept arguments:** Most commands work with optional parameters.
 
 ```bash
-/🚀:test pytest tests/unit
-/🚀:explain AuthController
-/🚀:optimize src/components/
+/test pytest tests/unit
+/explain AuthController
+/optimize src/components/
 ```
 
 **Skills are for learning:** Invoke a skill to understand a pattern, then apply it.
 
 ```bash
-@skills/🚀:writing-tests
+@skills/writing-tests
 # Follow the guidance to write tests
 ```
 
@@ -250,13 +278,13 @@ Your agent personality and workflow here.
 
 ```bash
 # Vague
-@agent-🚀:architect help with authentication
+@architect help with authentication
 
 # Better
-@agent-🚀:architect We need OAuth2 + JWT authentication for a React SPA with Node backend. 50k users.
+@architect We need OAuth2 + JWT authentication for a React SPA with Node backend. 50k users.
 ```
 
-**Check diagnostics:** Use `/🚀:quick-fix` before committing to clean up lint errors and type issues.
+**Check diagnostics:** Use `/quick-fix` before committing to clean up lint errors and type issues.
 
 ## Contributing
 
