@@ -24,7 +24,7 @@ You need Claude Code installed. If you don't have it yet, head to [claude.com/pr
 1. Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add https://github.com/rileyhilliard/claude-configs
+/plugin marketplace add https://github.com/rileyhilliard/claude-essentials
 ```
 
 2. Install the plugins you want (recommended order):
