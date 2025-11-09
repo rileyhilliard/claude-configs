@@ -1,6 +1,5 @@
 ---
 description: Comprehensive code review using the code-reviewer agent
-model: sonnet
 allowed-tools: Bash, Task, AskUserQuestion
 ---
 

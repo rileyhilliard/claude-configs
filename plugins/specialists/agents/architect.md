@@ -2,7 +2,6 @@
 name: architect
 description: Designs scalable system architectures and writes technical documentation including ADRs, PRDs, and technical design documents. Use when planning new products or features, evaluating technical tradeoffs, creating Mermaid architecture diagrams, documenting technical decisions, or analyzing implementation complexity. Specializes in battle-tested patterns, convention-over-invention approaches, and identifying failure modes.
 tools: Bash, Glob, Grep, Read, Edit, Write, TodoWrite, WebFetch, mcp__context7__resolve-library-id, mcp__context7__get-library-docs
-model: sonnet
 color: blue
 ---
 

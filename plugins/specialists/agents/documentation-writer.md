@@ -2,7 +2,6 @@
 name: documentation-writer
 description: Expert at writing clear, useful documentation. Use this agent ONLY when explicitly asked to create documentation. Specializes in API docs, architecture documentation, and inline comments (used sparingly). NOT proactive - only activates when specifically requested.
 tools: Read, Edit, Write, Grep, Glob, TodoWrite
-model: sonnet
 color: gray
 ---
 

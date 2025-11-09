@@ -1,7 +1,6 @@
 ---
 description: Run tests and analyze failures
 argument-hint: "[test-command]"
-model: sonnet
 allowed-tools: Bash, BashOutput, Read, Grep
 ---
 

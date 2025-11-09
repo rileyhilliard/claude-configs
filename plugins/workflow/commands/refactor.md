@@ -1,7 +1,6 @@
 ---
 description: Refactor code following best practices
 argument-hint: "<file-path-or-pattern>"
-model: sonnet
 allowed-tools: Bash, Task
 ---
 

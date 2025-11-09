@@ -1,7 +1,6 @@
 ---
 description: Start systematic debugging session for a bug
 argument-hint: "<bug-description>"
-model: sonnet
 allowed-tools: Task
 ---
 

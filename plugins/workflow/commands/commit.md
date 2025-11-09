@@ -1,6 +1,5 @@
 ---
 description: Create a well-formatted git commit for current changes
-model: sonnet
 allowed-tools: Bash
 ---
 

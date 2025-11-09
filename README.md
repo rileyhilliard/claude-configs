@@ -192,7 +192,6 @@ Add a markdown file to `~/.claude/plugins/workflow/commands/`:
 ---
 description: Your command description
 argument-hint: "[optional-arg]"
-model: sonnet
 allowed-tools: Bash, Read
 ---
 
@@ -223,7 +222,6 @@ Add a markdown file to `~/.claude/plugins/specialists/agents/`:
 name: my-agent
 description: Expert at specific domain
 tools: Read, Grep, Glob, Bash
-model: sonnet
 color: blue
 ---
 
