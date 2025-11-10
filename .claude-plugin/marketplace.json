@@ -12,7 +12,7 @@
     {
       "name": "workflow",
       "source": "./plugins/workflow/",
-      "description": "8 essential commands for daily development workflows plus session startup automation hook",
+      "description": "Unified /ce command interface for 8 essential development workflows (test, explain, quick-fix, debug, optimize, refactor, review, commit) plus session startup automation",
       "version": "1.0.0",
       "author": {
         "name": "Riley Hilliard",
@@ -25,14 +25,7 @@
       "category": "workflows",
       "strict": true,
       "commands": [
-        "./commands/test.md",
-        "./commands/explain.md",
-        "./commands/quick-fix.md",
-        "./commands/debug.md",
-        "./commands/optimize.md",
-        "./commands/refactor.md",
-        "./commands/review.md",
-        "./commands/commit.md"
+        "./commands/ce.md"
       ],
       "hooks": "./hooks/hooks.json"
     },

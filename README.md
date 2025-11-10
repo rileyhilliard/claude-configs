@@ -55,7 +55,7 @@ claude
 # Type "/" to see all commands
 
 # Try a quick command
-/explain README.md
+/ce explain README.md
 
 ```
 
@@ -63,18 +63,18 @@ claude
 
 ### workflow
 
-Essential commands for everyday development work. These are your quick shortcuts.
+Unified `/ce` command interface for everyday development work. All workflows accessible under one clean namespace.
 
 **Commands:**
 
-- `/test` - Run tests and analyze failures
-- `/explain` - Break down code or concepts
-- `/quick-fix` - Fix IDE diagnostics and linting errors
-- `/debug` - Launch systematic debugging
-- `/optimize` - Find performance bottlenecks
-- `/refactor` - Improve code quality
-- `/review` - Get comprehensive code review
-- `/commit` - Generate semantic commit messages
+- `/ce test [command]` - Run tests and analyze failures
+- `/ce explain <target>` - Break down code or concepts
+- `/ce quick-fix` - Fix IDE diagnostics and linting errors
+- `/ce debug` - Launch systematic debugging
+- `/ce optimize <target>` - Find performance bottlenecks
+- `/ce refactor <target>` - Improve code quality
+- `/ce review` - Get comprehensive code review
+- `/ce commit` - Generate semantic commit messages
 
 **Hooks:**
 
@@ -134,7 +134,7 @@ Expert AI personas for complex work requiring deep expertise.
 **Fix failing tests:**
 
 ```bash
-/test
+/ce test
 # If complex, escalate:
 @skills/systematic-debugging
 ```
@@ -142,15 +142,15 @@ Expert AI personas for complex work requiring deep expertise.
 **Review before merge:**
 
 ```bash
-/review
+/ce review
 git add .
-/commit
+/ce commit
 ```
 
 **Optimize performance:**
 
 ```bash
-/optimize src/components/DataTable.tsx
+/ce optimize src/components/DataTable.tsx
 # For deep analysis:
 @skills/optimizing-performance
 ```
@@ -166,7 +166,7 @@ git add .
 **Clean up legacy code:**
 
 ```bash
-/explain src/legacy/payment-processor.js
+/ce explain src/legacy/payment-processor.js
 @skills/refactoring-code
 ```
 
@@ -174,7 +174,7 @@ git add .
 
 **Commands vs Skills vs Agents:**
 
-- **Commands** (`/command-name`) are quick keyboard shortcuts for routine tasks
+- **Commands** (`/ce <subcommand>`) are quick keyboard shortcuts for routine tasks
 - **Skills** (`@skills/skill-name`) are reusable workflows that guide specific development patterns
 - **Agents** (`@agent-name`) are expert personas for complex, multi-step work
 
@@ -235,7 +235,7 @@ Your agent personality and workflow here.
 ├── CLAUDE.md              # Communication guidelines (copy here manually)
 └── plugins/
     ├── workflow/
-    │   ├── commands/      # 8 development commands
+    │   ├── commands/      # Unified /ce command with 8 subcommands
     │   └── hooks/         # Session automation
     ├── dev/
     │   └── skills/        # 11 development patterns
@@ -262,9 +262,9 @@ Install in this order for best results:
 **Commands accept arguments:** Most commands work with optional parameters.
 
 ```bash
-/test pytest tests/unit
-/explain AuthController
-/optimize src/components/
+/ce test pytest tests/unit
+/ce explain AuthController
+/ce optimize src/components/
 ```
 
 **Skills are for learning:** Invoke a skill to understand a pattern, then apply it.
@@ -284,7 +284,7 @@ Install in this order for best results:
 @architect We need OAuth2 + JWT authentication for a React SPA with Node backend. 50k users.
 ```
 
-**Check diagnostics:** Use `/quick-fix` before committing to clean up lint errors and type issues.
+**Check diagnostics:** Use `/ce quick-fix` before committing to clean up lint errors and type issues.
 
 ## Contributing
 
