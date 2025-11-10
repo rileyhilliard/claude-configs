@@ -1,17 +1,18 @@
 # Claude Essentials
 
-A curated collection of development workflows, skills, and specialized agents for Claude Code, distributed as marketplace plugins.
+A unified development plugin for Claude Code with essential commands, skills, and specialized agents, all accessible under the `ce` namespace.
 
 ## What This Is
 
-This is a plugin marketplace that provides four focused plugins for Claude Code:
+This is a single, comprehensive plugin (`ce`) that provides:
 
-- **workflow** - Essential development commands and session automation
-- **dev** - Reusable patterns for testing, debugging, and refactoring
-- **meta** - Meta skills for working with agents and creating custom skills
-- **specialists** - Expert AI personas for architecture, code review, and documentation
+- **8 Commands** - Quick workflows accessible as `/ce:test`, `/ce:explain`, `/ce:commit`, etc.
+- **15 Skills** - Reusable development patterns accessed via `@skills/ce:writing-tests`, `@skills/ce:systematic-debugging`, etc.
+- **3 Agents** - Expert AI personas invoked as `@ce:architect`, `@ce:code-reviewer`, `@ce:documentation-writer`
+- **Session Hooks** - Automatic project configuration on startup
+- **Reference Templates** - ADR, PRD, and technical design templates
 
-These plugins work together to provide a comprehensive development environment, but you can install just the ones you need.
+Everything unified under the `ce` namespace for clean, consistent developer experience.
 
 ## Quick Start
 
@@ -27,21 +28,13 @@ You need Claude Code installed. If you don't have it yet, head to [claude.com/pr
 /plugin marketplace add https://github.com/rileyhilliard/claude-essentials
 ```
 
-2. Install the plugins you want (recommended order):
+2. Install the ce plugin:
 
 ```bash
-# Start with meta for foundational capabilities
-/plugin install meta
-
-# Add development workflows
-/plugin install dev
-
-# Get the command shortcuts
-/plugin install workflow
-
-# Optional: specialized agents for architecture and reviews
-/plugin install specialists
+/plugin install ce
 ```
+
+That's it! You now have access to all commands, skills, and agents under the `ce` namespace.
 
 ### Verify Installation
 
@@ -51,81 +44,78 @@ Start Claude Code and try these:
 # Start Claude Code
 claude
 
-# Check available commands
-# Type "/" to see all commands
-
 # Try a quick command
-/ce explain README.md
+/ce:explain README.md
 
+# Use a skill
+@skills/ce:writing-tests
+
+# Invoke an agent
+@ce:architect
 ```
 
-## The Plugins
+## What's Included
 
-### workflow
+### Commands
 
-Unified `/ce` command interface for everyday development work. All workflows accessible under one clean namespace.
+Quick workflows for everyday development tasks, accessed with `/ce:` prefix:
 
-**Commands:**
+- `/ce:test [command]` - Run tests and analyze failures
+- `/ce:explain <target>` - Break down code or concepts
+- `/ce:quick-fix` - Fix IDE diagnostics and linting errors
+- `/ce:debug` - Launch systematic debugging
+- `/ce:optimize <target>` - Find performance bottlenecks
+- `/ce:refactor <target>` - Improve code quality
+- `/ce:review` - Get comprehensive code review
+- `/ce:commit` - Generate semantic commit messages
 
-- `/ce test [command]` - Run tests and analyze failures
-- `/ce explain <target>` - Break down code or concepts
-- `/ce quick-fix` - Fix IDE diagnostics and linting errors
-- `/ce debug` - Launch systematic debugging
-- `/ce optimize <target>` - Find performance bottlenecks
-- `/ce refactor <target>` - Improve code quality
-- `/ce review` - Get comprehensive code review
-- `/ce commit` - Generate semantic commit messages
+### Skills
 
-**Hooks:**
+Reusable development patterns, accessed with `@skills/ce:` prefix:
 
-- Session startup automation
-- Project-specific configurations
+**Testing & Quality:**
+- `ce:writing-tests` - Testing Trophy methodology, behavior-focused tests
+- `ce:testing-anti-patterns` - Prevent common testing mistakes
+- `ce:verification-before-completion` - Verify before claiming success
 
-### dev
+**Debugging & Problem Solving:**
+- `ce:systematic-debugging` - Four-phase debugging framework
+- `ce:root-cause-tracing` - Trace bugs to their source
+- `ce:condition-based-waiting` - Replace race conditions with polling
 
-Core development patterns you can invoke as needed. These are reusable workflows that guide specific tasks.
+**Code Quality:**
+- `ce:refactoring-code` - Behavior-preserving code improvements
+- `ce:optimizing-performance` - Measurement-driven optimization
+- `ce:handling-errors` - Error handling best practices
 
-**Skills:**
+**Planning & Execution:**
+- `ce:writing-plans` - Create detailed implementation plans
+- `ce:executing-plans` - Execute plans in controlled batches
 
-- `writing-tests` - Testing Trophy methodology, behavior-focused tests
-- `testing-anti-patterns` - Prevent common testing mistakes
-- `systematic-debugging` - Four-phase debugging framework
-- `refactoring-code` - Behavior-preserving code improvements
-- `optimizing-performance` - Measurement-driven optimization
-- `handling-errors` - Error handling best practices
-- `root-cause-tracing` - Trace bugs to their source
-- `verification-before-completion` - Verify before claiming success
-- `writing-plans` - Create detailed implementation plans
-- `executing-plans` - Execute plans in controlled batches
-- `condition-based-waiting` - Replace race conditions with polling
+**Meta Skills:**
+- `ce:creating-claude-skills` - Best practices for authoring skills
+- `ce:dispatching-parallel-agents` - Investigate independent problems concurrently
+- `ce:subagent-driven-development` - Execute plans with fresh subagents per task
+- `ce:visualizing-with-mermaid` - Create professional technical diagrams
 
-### meta
+### Agents
 
-Meta skills for working with Claude Code itself. Create custom skills, dispatch parallel agents, and visualize systems.
+Expert AI personas for complex work, accessed with `@ce:` prefix:
 
-**Skills:**
+- `@ce:architect` - System design and architectural planning with diagrams
+- `@ce:code-reviewer` - Comprehensive PR/MR reviews enforcing standards
+- `@ce:documentation-writer` - Clear, practical documentation
 
-- `creating-claude-skills` - Best practices for authoring skills
-- `using-superpowers` - Mandatory workflows for finding and using skills
-- `dispatching-parallel-agents` - Investigate independent problems concurrently
-- `subagent-driven-development` - Execute plans with fresh subagents per task
-- `visualizing-with-mermaid` - Create professional technical diagrams
-
-### specialists
-
-Expert AI personas for complex work requiring deep expertise.
-
-**Agents:**
-
-- `@architect` - System design and architectural planning with diagrams
-- `@code-reviewer` - Comprehensive PR/MR reviews enforcing standards
-- `@documentation-writer` - Clear, practical documentation
-
-**Reference Templates:**
+### Reference Templates
 
 - ADR (Architecture Decision Record)
 - PRD (Product Requirements Document)
 - Technical Design Document
+
+### Hooks
+
+- Session startup automation
+- Project-specific configurations
 
 ## Usage Examples
 
@@ -134,59 +124,59 @@ Expert AI personas for complex work requiring deep expertise.
 **Fix failing tests:**
 
 ```bash
-/ce test
+/ce:test
 # If complex, escalate:
-@skills/systematic-debugging
+@skills/ce:systematic-debugging
 ```
 
 **Review before merge:**
 
 ```bash
-/ce review
+/ce:review
 git add .
-/ce commit
+/ce:commit
 ```
 
 **Optimize performance:**
 
 ```bash
-/ce optimize src/components/DataTable.tsx
+/ce:optimize src/components/DataTable.tsx
 # For deep analysis:
-@skills/optimizing-performance
+@skills/ce:optimizing-performance
 ```
 
 **Plan a feature:**
 
 ```bash
-@architect I need to add real-time notifications. We have 10k concurrent users.
+@ce:architect I need to add real-time notifications. We have 10k concurrent users.
 # Then create a plan:
-@skills/writing-plans
+@skills/ce:writing-plans
 ```
 
 **Clean up legacy code:**
 
 ```bash
-/ce explain src/legacy/payment-processor.js
-@skills/refactoring-code
+/ce:explain src/legacy/payment-processor.js
+@skills/ce:refactoring-code
 ```
 
 ### Understanding the System
 
 **Commands vs Skills vs Agents:**
 
-- **Commands** (`/ce <subcommand>`) are quick keyboard shortcuts for routine tasks
-- **Skills** (`@skills/skill-name`) are reusable workflows that guide specific development patterns
-- **Agents** (`@agent-name`) are expert personas for complex, multi-step work
+- **Commands** (`/ce:test`, `/ce:review`) are quick keyboard shortcuts for routine tasks
+- **Skills** (`@skills/ce:writing-tests`) are reusable workflows that guide specific development patterns
+- **Agents** (`@ce:architect`) are expert personas for complex, multi-step work
 
 Use commands for quick actions, skills for following proven patterns, and agents when you need specialized expertise.
 
 ## Customization
 
-All plugins are just markdown files organized in directories. Want to customize? Edit them directly in `~/.claude/plugins/`.
+All components are just markdown files organized in directories. Want to customize? Edit them directly in `~/.claude/plugins/ce/`.
 
 ### Creating Your Own Command
 
-Add a markdown file to `~/.claude/plugins/workflow/commands/`:
+Add a markdown file to `~/.claude/plugins/ce/commands/`:
 
 ```markdown
 ---
@@ -198,14 +188,16 @@ allowed-tools: Bash, Read
 Your command instructions here.
 ```
 
+This will be accessible as `/ce:your-command`.
+
 ### Creating Your Own Skill
 
-Add a markdown file to a skills directory in any plugin:
+Add a directory with SKILL.md to `~/.claude/plugins/ce/skills/`:
 
 ```markdown
 ---
 name: my-skill
-description: What this skill does
+description: What this skill does and when to use it
 ---
 
 # Skill Instructions
@@ -213,9 +205,11 @@ description: What this skill does
 Your skill workflow here.
 ```
 
+This will be accessible as `@skills/ce:my-skill`.
+
 ### Creating Your Own Agent
 
-Add a markdown file to `~/.claude/plugins/specialists/agents/`:
+Add a markdown file to `~/.claude/plugins/ce/agents/`:
 
 ```markdown
 ---
@@ -228,49 +222,38 @@ color: blue
 Your agent personality and workflow here.
 ```
 
+This will be accessible as `@ce:my-agent`.
+
 ## Project Structure
 
 ```
 ~/.claude/
 ├── CLAUDE.md              # Communication guidelines (copy here manually)
 └── plugins/
-    ├── workflow/
-    │   ├── commands/      # Unified /ce command with 8 subcommands
-    │   └── hooks/         # Session automation
-    ├── dev/
-    │   └── skills/        # 11 development patterns
-    ├── meta/
-    │   └── skills/        # 4 meta skills
-    └── specialists/
-        ├── agents/        # 3 expert agents
-        └── references/    # Document templates
+    └── ce/
+        ├── .claude-plugin/
+        │   └── plugin.json       # Plugin metadata
+        ├── commands/             # 8 commands (/ce:test, /ce:explain, etc.)
+        ├── skills/               # 15 skills (@skills/ce:writing-tests, etc.)
+        ├── agents/               # 3 agents (@ce:architect, etc.)
+        ├── hooks/                # Session automation
+        └── references/           # Document templates (ADR, PRD, Technical Design)
 ```
 
-## Installation Order Matters
-
-Install in this order for best results:
-
-1. **meta** - Provides foundational meta capabilities
-2. **dev** - Adds core development patterns
-3. **workflow** - Enables command shortcuts (depends on skills)
-4. **specialists** - Optional, for architecture and reviews
-
 ## Tips
-
-**Start simple:** Install workflow first if you just want commands. Add other plugins as needed.
 
 **Commands accept arguments:** Most commands work with optional parameters.
 
 ```bash
-/ce test pytest tests/unit
-/ce explain AuthController
-/ce optimize src/components/
+/ce:test pytest tests/unit
+/ce:explain AuthController
+/ce:optimize src/components/
 ```
 
 **Skills are for learning:** Invoke a skill to understand a pattern, then apply it.
 
 ```bash
-@skills/writing-tests
+@skills/ce:writing-tests
 # Follow the guidance to write tests
 ```
 
@@ -278,13 +261,13 @@ Install in this order for best results:
 
 ```bash
 # Vague
-@architect help with authentication
+@ce:architect help with authentication
 
 # Better
-@architect We need OAuth2 + JWT authentication for a React SPA with Node backend. 50k users.
+@ce:architect We need OAuth2 + JWT authentication for a React SPA with Node backend. 50k users.
 ```
 
-**Check diagnostics:** Use `/ce quick-fix` before committing to clean up lint errors and type issues.
+**Check diagnostics:** Use `/ce:quick-fix` before committing to clean up lint errors and type issues.
 
 ## Contributing
 

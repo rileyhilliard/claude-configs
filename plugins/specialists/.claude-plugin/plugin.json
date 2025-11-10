@@ -1,9 +1,0 @@
-{
-  "name": "specialists",
-  "description": "Specialized agents (technical architect, code reviewer, documentation writer) plus reference templates for ADRs, PRDs, and technical designs",
-  "version": "1.0.0",
-  "author": {
-    "name": "Riley Hilliard"
-  },
-  "license": "MIT"
-}
