@@ -117,6 +117,22 @@ Expert AI personas for complex work, accessed with `@ce:` prefix:
 - Session startup automation
 - Project-specific configurations
 
+### Human-in-the-Loop Agents 🤝
+
+5 specialized general-purpose agents with intelligent preflight wizards and selective decision tracking:
+
+| Agent | Color | Logs Decisions | Best For |
+| --- | --- | --- | --- |
+| `@codebase-explorer` | 🔵 Blue | No | Documenting architecture and data flows in any codebase |
+| `@session-discovery-logger` | 🟣 Purple | No | Capturing surprising findings and gotchas from work sessions |
+| `@work-session-summarizer` | 🟢 Green | **Yes** ✓ | Creating worklogs, commit messages, or session notes |
+| `@documentation-updater` | ⚫ Gray | No | Syncing documentation with current code implementation |
+| `@code-quality-reviewer` | 🔴 Red | **Yes** ✓ | Reviewing code for security, performance, and consistency |
+
+**What makes these special**: Work in ANY codebase without setup requirements, adapt to any repository structure, and selectively track significant decisions to `major_decisions.json`.
+
+[📖 Read full documentation →](agents/README-HUMAN-IN-LOOP.md)
+
 ## Usage Examples
 
 ### Typical Workflows
